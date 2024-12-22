@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  mailup_grabber:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      MAILUP_CLIENT_ID: ${MAILUP_CLIENT_ID}
+      MAILUP_CLIENT_SECRET: ${MAILUP_CLIENT_SECRET}
+      MAILUP_USERNAME: ${MAILUP_USERNAME}
+      MAILUP_PASSWORD: ${MAILUP_PASSWORD}
